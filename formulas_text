@@ -1,0 +1,33 @@
+=ROUND(VALUE(I7),0)
+=RIGHT(P8,3)
+=IFERROR( IF(LEN($P$8)>=Q11*3,LEFT(RIGHT($P$8,Q11*3),3),LEFT($P$8,LEN($P$8)-Q10*3)),"---")
+=IFERROR( IF(LEN($P$8)>=Q12*3,LEFT(RIGHT($P$8,Q12*3),3),LEFT($P$8,LEN($P$8)-Q11*3)),"---")
+=IFERROR( IF(LEN($P$8)>=Q13*3,LEFT(RIGHT($P$8,Q13*3),3),LEFT($P$8,LEN($P$8)-Q12*3)),"---")
+=IFERROR( IF(LEN($P$8)>=Q14*3,LEFT(RIGHT($P$8,Q14*3),3),LEFT($P$8,LEN($P$8)-Q13*3)),"---")
+=IFERROR( IF(LEN($P$8)>=Q15*3,LEFT(RIGHT($P$8,Q15*3),3),LEFT($P$8,LEN($P$8)-Q14*3)),"---")
+=IFERROR(VALUE(IF(LEN(P10)<3,0,LEFT(P10,1))),"")
+=IFERROR(VALUE(IF(LEN(P10)>2,MID(P10,2,1),IF(LEN(P10)=2,LEFT(P10,1),0))),"")
+=IFERROR(VALUE(RIGHT(P10,1)),"")
+=IFERROR( VLOOKUP(M10,$B$9:$F$18,2,0),"")
+=IFERROR( VLOOKUP(N10,$B$9:$F$18,3,0),"")
+=IFERROR( VLOOKUP(O10,$B$9:$F$18,4,0),"")
+				 و 
+0				
+1	یک	ده	یکصد	
+2	دو	بیست	دویست	 هزار 
+3	سه	سی	سیصد	 میلیون 
+4	چهار	چهل	چهارصد	 میلیارد 
+5	پنج	پنجاه	پانصد	 تریلیون 
+6	شش	شصت	ششصد	
+7	هفت	هفتاد	هفتصد	
+8	هشت	هشتاد	هشتصد	
+9	نه	نود	نهصد	
+11	ده و یک	یازده		
+12	ده و دو	دوازده		
+13	ده و سه	سیزده		
+14	ده و چهار	چهارده		
+15	ده و پنج	پانزده		
+16	ده و شش	شانزده		
+17	ده و هفت	هفده		
+18	ده و هشت	هجده		
+19	ده و نه	نوزده		
